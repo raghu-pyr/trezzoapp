@@ -1,0 +1,203 @@
+{% extends '_base.html' %} {% block content %} {% load static %}
+
+<section id="showcase">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item carousel-image-1 active">
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1 class="boldtitle">ENGINEERING.</h1>
+            <h2 class="boldsub">Engineer the furture with us</h2>
+
+            <a href="#" class="btn btn-primary btn-large">Contact Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item carousel-image-2">
+        <div class="container">
+          <div class="carousel-caption d-sm-block text-left">
+            <h1 class="boldtitle">INNOVATION.</h1>
+            <h2 class="boldsub">Drive the Innovation of Tomorrow</h2>
+
+            <a href="#" class="btn btn-primary btn-large">Contact Us</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item carousel-image-3">
+        <div class="container">
+          <div class="carousel-caption d-sm-block text-left">
+            <h1 class="boldtitle">TECHNOLOGY.</h1>
+            <h2 class="boldsub">State-of-the-Art technologies with us</h2>
+            <a href="#" class="btn btn-primary btn-large">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+
+    <a href="#myCarousel" data-slide="next" class="carousel-control-next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+</section>
+
+<section id="capability">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-7 p-3" id="capability-text">
+        <h2 class="text-dark">Capabilities</h2>
+        <h3>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, amet?
+          Quidem voluptate nobis eum dolorum vitae minima deleniti veritatis
+          error? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Dolorum, numquam. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Consectetur, facere. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Libero, ad. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Architecto, magni!
+        </h3>
+      </div>
+      <div class="col-md-5 p-0" id="capability-img">
+        <img src="{% static 'img/capability-hook.png' %}" alt="" />
+        <div id="dark-overlay"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h1 id="headertext">SERVICE AND SUPPORT</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row p-0">
+      <div class="col-md-4 p-0">
+        <img class="img-fluid" src="{% static 'img/design-car.png' %}" alt="" />
+        <div class="text-overlay">
+          <h3>DESIGN</h3>
+        </div>
+      </div>
+      <div class="col-md-4 p-0">
+        <img class="img-fluid" src="{% static 'img/manufacturing-drill.png' %}" alt="" />
+        <div class="text-overlay">
+          <h3>MANUFACTURING</h3>
+        </div>
+      </div>
+      <div class="col-md-4 p-0">
+        <img class="img-fluid" src="{% static 'img/testing-tab.png' %}" alt="" />
+        <div class="text-overlay">
+          <h3>TESTING</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="client">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h1 id="headertext">CLIENTS</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-md-3 text-center p-4">
+        <img class="img-fluid" src="{% static 'img/cat-logo.png' %}" alt="" />
+      </div>
+      <div class="col-md-3 offset-md-6 text-center p-4">
+        <img class="img-fluid" src="{% static 'img/HCL-logo.png' %}" alt="" />
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col p-4">
+        <img class="img-fluid" src="{% static 'img/Danfoss-logo.png' %}" alt="" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 text-center p-4">
+        <img class="img-fluid" src="{% static 'img/BEL-logo.jpg' %}" alt="" />
+      </div>
+      <div class="col-md-3 offset-md-6 text-center p-4">
+        <img class="img-fluid" src="{% static 'img/sg-logo.png' %}" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="industries">
+  <div class="container-fluid px-0">
+    <div class="row">
+      <div class="col text-center">
+        <h1 id="headertext">INDUSTRY</h1>
+      </div>
+    </div>
+    <div class="row p-0">
+      <div class="col-md-4 p-0">
+        <img class="img-fluid" src="{% static 'img/aerospace-industry.png' %}" alt="" />
+        <div class="text-overlay">
+          <h3>AEROSPACE</h3>
+        </div>
+      </div>
+      <div class="col-md-4 p-0">
+        <img class="img-fluid" src="{% static 'img/automotive-industry.png' %}" alt="" />
+        <div class="text-overlay">
+          <h3>AUTOMOTIVE</h3>
+        </div>
+      </div>
+      <div class="col-md-4 p-0">
+        <img
+          class="img-fluid"
+          src="{% static 'img/consumer-electronic-industry.png' %}"
+          alt=""
+        />
+        <div class="text-overlay">
+          <h3>CONSUMER ELECTRONICS</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row p-0">
+      <div class="col-md-4 p-0">
+        <img class="img-fluid" src="{% static 'img/Euipment-industry.png' %}" alt="" />
+        <div class="text-overlay">
+          <h3>EQUIPEMENT</h3>
+        </div>
+      </div>
+      <div class="col-md-4 p-0">
+        <img class="img-fluid" src="{% static 'img/industrial-industry.png' %}" alt="" />
+        <div class="text-overlay">
+          <h3>INDUSTRIAL</h3>
+        </div>
+      </div>
+      <div class="col-md-4 p-0">
+        <img class="img-fluid" src="{% static 'img/medical-industry.png' %}" alt="" />
+        <div class="text-overlay">
+          <h3>MEDICAL</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row py-5">
+      <div class="col text-center">
+        <a href="#" class="btn btn-lg btn-outline-dark">Explore</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

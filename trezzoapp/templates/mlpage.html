@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+{% block content %}
+{% load i18n %}
+
+<h1>
+    This is a English text
+</h1>
+
+{% get_current_language as LANGUAGE_CODE %}
+<h1>
+    {% comment %} Translator: Please translate this {% endcomment %}
+    {% trans "This is to be translated into some other language" %} 
+</h1>
+
+{% endblock content %}

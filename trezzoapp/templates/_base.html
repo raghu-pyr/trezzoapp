@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link
+      href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <div class="navbar-section">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div
+          class="navbar navbar-expand-lg navbar-light bg-light p-3"
+          id="top-bar" onmouseover="scrollCollapse()"
+        >
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item px-4 mx-auto dropdown text-center">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item text-center" href="#">Design</a>
+                <a class="dropdown-item text-center" href="#">Manufacturing</a>
+                <a class="dropdown-item text-center" href="#">Testing</a>
+              </div>
+            </li>
+
+            <li class="nav-item px-4 mx-auto dropdown">
+              <a
+                class="nav-link dropdown-toggle text-center"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Industries
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item text-center" href="#">Aerospace</a>
+                <a class="dropdown-item text-center" href="#">Automotive</a>
+                <a class="dropdown-item text-center" href="#">Electronics</a>
+                <a class="dropdown-item text-center" href="#">Equipement</a>
+                <a class="dropdown-item text-center" href="#">Industrial</a>
+                <a class="dropdown-item text-center" href="#">Medical</a>
+              </div>
+            </li>
+            <li class="nav-item px-4 mx-auto">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item px-4 mx-auto">
+              <a class="nav-link" href="#">Clients</a>
+            </li>
+            <li class="nav-item px-4 mx-auto">
+              <a class="nav-link" href="{% url 'baseapp:ml' %}">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="navbar navbar-light navbar-main" id="bottom-bar">
+        <div id="navbar-toggler-icon">
+          <button
+            class="navbar-toggler collapsed"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+            <span class="close">
+              <svg
+                class="svg-inline--fa fa-times fa-w-11"
+                width="30px"
+                height="30px"
+                version="1.1"
+                viewBox="0 0 660 660"
+                aria-hidden="true"
+                data-icon="times"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:cc="http://creativecommons.org/ns#"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+              >
+                <metadata>
+                  <rdf:RDF>
+                    <cc:Work rdf:about="">
+                      <dc:format>image/svg+xml</dc:format>
+                      <dc:type
+                        rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+                      />
+                      <dc:title />
+                    </cc:Work>
+                  </rdf:RDF>
+                </metadata>
+                <path
+                  d="m471.6 343.79 194.43-193.82c23.86-23.784 23.86-62.346 0-86.15l-43.212-43.075c-23.86-23.784-62.545-23.784-86.424 0l-194.43 193.82-194.43-193.82c-23.86-23.784-62.545-23.784-86.424 0l-43.212 43.075c-23.86 23.784-23.86 62.346 0 86.15l194.43 193.82-194.43 193.82c-23.86 23.784-23.86 62.346 0 86.15l43.212 43.075c23.86 23.784 62.564 23.784 86.424 0l194.43-193.82 194.43 193.82c23.86 23.784 62.564 23.784 86.424 0l43.212-43.075c23.86-23.784 23.86-62.346 0-86.15z"
+                  fill="currentColor"
+                  stroke-width="1.9399"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <a class="navbar-brand" href="#"
+          ><img src="{% static 'img/trezzo-logo.png' %}" alt=""
+        /></a>
+
+
+        <div class="d-flex">
+          <ul>
+            <ul class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="http://example.com"
+                id="dropdown09"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                ><span class="flag-icon flag-icon-us"> </span> EN</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdown09">
+                <a class="dropdown-item" href="#fr"
+                  ><span class="flag-icon flag-icon-fr"> </span> FR</a
+                >
+                <a class="dropdown-item" href="#it"
+                  ><span class="flag-icon flag-icon-it"> </span> IT</a
+                >
+                <a class="dropdown-item" href="#ru"
+                  ><span class="flag-icon flag-icon-ru"> </span> RU</a
+                >
+              </div>
+            </ul>
+          </ul>
+          <svg
+            width="30px"
+            height="30px"
+            version="1.1"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:cc="http://creativecommons.org/ns#"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+          >
+            <metadata>
+              <rdf:RDF>
+                <cc:Work rdf:about="">
+                  <dc:format>image/svg+xml</dc:format>
+                  <dc:type
+                    rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+                  />
+                </cc:Work>
+              </rdf:RDF>
+            </metadata>
+            <path
+              d="m256 0c-141.16 0-256 114.84-256 256s114.84 256 256 256 256-114.84 256-256-114.84-256-256-256zm-15 125.66c-22.82-0.98047-45.41-4.1875-66.98-9.4023 3.4453-8.1641 7.1836-16.004 11.215-23.434 16.539-30.477 36.844-51.863 55.766-59.609zm0 30.023v85.32h-93.691c1.3203-33.301 6.9961-66.359 16.383-96.43 24.875 6.2656 50.988 10.059 77.309 11.109zm0 115.32v85.32c-26.32 1.0508-52.434 4.8438-77.309 11.109-9.3867-30.07-15.062-63.129-16.383-96.43zm0 115.34v92.445c-18.922-7.7461-39.227-29.133-55.766-59.609-4.0312-7.4297-7.7695-15.27-11.215-23.434 21.57-5.2148 44.156-8.4219 66.98-9.4023zm30 0c22.82 0.98047 45.41 4.1875 66.98 9.4023-3.4453 8.1641-7.1836 16.004-11.215 23.434-16.539 30.477-36.844 51.863-55.766 59.609zm0-30.023v-85.32h93.691c-1.3203 33.301-6.9961 66.359-16.383 96.43-24.875-6.2656-50.988-10.059-77.309-11.109zm0-115.32v-85.32c26.32-1.0508 52.434-4.8438 77.309-11.109 9.3867 30.07 15.062 63.129 16.383 96.43zm0-115.34v-92.445c18.922 7.7461 39.227 29.133 55.766 59.609 4.0312 7.4297 7.7695 15.27 11.215 23.434-21.57 5.2148-44.16 8.4219-66.98 9.4023zm82.133-47.145c-7.5117-13.844-15.672-26.047-24.273-36.457 29.992 10.242 57.16 26.629 80.008 47.645-13.031 6.9805-27.074 13.043-41.848 18.109-4.1914-10.18-8.8242-19.973-13.887-29.297zm-194.27 0c-5.0625 9.3242-9.6953 19.117-13.887 29.297-14.773-5.0664-28.816-11.133-41.848-18.109 22.848-21.016 50.016-37.402 80.008-47.645-8.6016 10.41-16.758 22.609-24.273 36.457zm-24.035 57.492c-10.238 32.754-16.258 68.461-17.555 105h-86.766c3.2109-48.754 21.934-93.34 51.293-128.83 16.293 9.3438 34.137 17.336 53.027 23.836zm-17.555 135c1.2969 36.539 7.3164 72.242 17.555 105-18.891 6.5-36.734 14.492-53.027 23.836-29.359-35.492-48.082-80.078-51.293-128.83zm27.703 133.19c4.1914 10.18 8.8242 19.973 13.887 29.297 7.5156 13.844 15.672 26.047 24.273 36.457-29.992-10.242-57.16-26.629-80.004-47.645 13.023-6.9766 27.07-13.043 41.844-18.109zm208.15 29.297c5.0625-9.3242 9.6953-19.117 13.887-29.297 14.773 5.0664 28.816 11.133 41.848 18.109-22.848 21.016-50.016 37.402-80.008 47.645 8.6016-10.41 16.758-22.609 24.273-36.457zm24.035-57.492c10.238-32.754 16.258-68.461 17.555-105h86.766c-3.2109 48.754-21.934 93.34-51.293 128.83-16.293-9.3438-34.137-17.336-53.027-23.836zm17.555-135c-1.2969-36.539-7.3164-72.242-17.555-105 18.891-6.5 36.734-14.492 53.027-23.836 29.359 35.492 48.082 80.078 51.293 128.83z"
+              fill="#7f7f7f"
+            />
+          </svg>
+        </div>
+
+        <!-- <div class="dropdown" id="lang-dropdown">
+          <button
+            class="btn btn-default dropdown-toggle"
+            type="button"
+            id="dropdownMenu1"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="true"
+          >
+            <svg
+              width="30px"
+              height="30px"
+              version="1.1"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:cc="http://creativecommons.org/ns#"
+              xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+            >
+              <metadata>
+                <rdf:RDF>
+                  <cc:Work rdf:about="">
+                    <dc:format>image/svg+xml</dc:format>
+                    <dc:type
+                      rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+                    />
+                  </cc:Work>
+                </rdf:RDF>
+              </metadata>
+              <path
+                d="m256 0c-141.16 0-256 114.84-256 256s114.84 256 256 256 256-114.84 256-256-114.84-256-256-256zm-15 125.66c-22.82-0.98047-45.41-4.1875-66.98-9.4023 3.4453-8.1641 7.1836-16.004 11.215-23.434 16.539-30.477 36.844-51.863 55.766-59.609zm0 30.023v85.32h-93.691c1.3203-33.301 6.9961-66.359 16.383-96.43 24.875 6.2656 50.988 10.059 77.309 11.109zm0 115.32v85.32c-26.32 1.0508-52.434 4.8438-77.309 11.109-9.3867-30.07-15.062-63.129-16.383-96.43zm0 115.34v92.445c-18.922-7.7461-39.227-29.133-55.766-59.609-4.0312-7.4297-7.7695-15.27-11.215-23.434 21.57-5.2148 44.156-8.4219 66.98-9.4023zm30 0c22.82 0.98047 45.41 4.1875 66.98 9.4023-3.4453 8.1641-7.1836 16.004-11.215 23.434-16.539 30.477-36.844 51.863-55.766 59.609zm0-30.023v-85.32h93.691c-1.3203 33.301-6.9961 66.359-16.383 96.43-24.875-6.2656-50.988-10.059-77.309-11.109zm0-115.32v-85.32c26.32-1.0508 52.434-4.8438 77.309-11.109 9.3867 30.07 15.062 63.129 16.383 96.43zm0-115.34v-92.445c18.922 7.7461 39.227 29.133 55.766 59.609 4.0312 7.4297 7.7695 15.27 11.215 23.434-21.57 5.2148-44.16 8.4219-66.98 9.4023zm82.133-47.145c-7.5117-13.844-15.672-26.047-24.273-36.457 29.992 10.242 57.16 26.629 80.008 47.645-13.031 6.9805-27.074 13.043-41.848 18.109-4.1914-10.18-8.8242-19.973-13.887-29.297zm-194.27 0c-5.0625 9.3242-9.6953 19.117-13.887 29.297-14.773-5.0664-28.816-11.133-41.848-18.109 22.848-21.016 50.016-37.402 80.008-47.645-8.6016 10.41-16.758 22.609-24.273 36.457zm-24.035 57.492c-10.238 32.754-16.258 68.461-17.555 105h-86.766c3.2109-48.754 21.934-93.34 51.293-128.83 16.293 9.3438 34.137 17.336 53.027 23.836zm-17.555 135c1.2969 36.539 7.3164 72.242 17.555 105-18.891 6.5-36.734 14.492-53.027 23.836-29.359-35.492-48.082-80.078-51.293-128.83zm27.703 133.19c4.1914 10.18 8.8242 19.973 13.887 29.297 7.5156 13.844 15.672 26.047 24.273 36.457-29.992-10.242-57.16-26.629-80.004-47.645 13.023-6.9766 27.07-13.043 41.844-18.109zm208.15 29.297c5.0625-9.3242 9.6953-19.117 13.887-29.297 14.773 5.0664 28.816 11.133 41.848 18.109-22.848 21.016-50.016 37.402-80.008 47.645 8.6016-10.41 16.758-22.609 24.273-36.457zm24.035-57.492c10.238-32.754 16.258-68.461 17.555-105h86.766c-3.2109 48.754-21.934 93.34-51.293 128.83-16.293-9.3438-34.137-17.336-53.027-23.836zm17.555-135c-1.2969-36.539-7.3164-72.242-17.555-105 18.891-6.5 36.734-14.492 53.027-23.836 29.359 35.492 48.082 80.078 51.293 128.83z"
+                fill="#7f7f7f"
+              />
+            </svg>
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li>
+              <a href="#" data-value="eng"
+                ><img src="{% static 'img/eng.png' %}" alt="" /> ENGLISH</a
+              >
+            </li>
+            <li>
+              <a href="#" data-value="esp"
+                ><img src="{% static 'img/esp.png' %}" alt="" /> SPANISH</a
+              >
+            </li>
+            <li>
+              <a href="#" data-value="ger"
+                ><img src="{% static 'img/ger.png' %}" alt="" /> GERMAN</a
+              >
+            </li>
+            <li>
+              <a href="#" data-value="fre"
+                ><img src="{% static 'img/fra.png' %}" alt="" /> FRENCH</a
+              >
+            </li>
+            <li>
+              <a href="#" data-value="ita"
+                ><img src="{% static 'img/ita.png' %}" alt="" /> ITALIAN</a
+              >
+            </li>
+          </ul>
+        </div> -->
+
+        <!-- <div
+            class="dropdown-menu dropdown-menu-left"
+            aria-labelledby="dropdownMenuLink"
+            id="lang-dropdown"
+          >
+            <a class="dropdown-item" href="#">
+              <img src="{% static 'img/eng.png' %}" alt="" />
+              ENGLISH
+            </a>
+            <a class="dropdown-item" href="#">
+              <img src="{% static 'img/esp.png' %}" alt="" />
+              SPANISH
+            </a>
+            <a class="dropdown-item" href="#">
+              <img src="{% static 'img/ger.png' %}" alt="" />
+              GERMAN
+            </a>
+            <a class="dropdown-item" href="#">
+              <img src="{% static 'img/fra.png' %}" alt="" />
+              FRENCH
+            </a>
+            <a class="dropdown-item" href="#">
+              <img src="{% static 'img/ita.png' %}" alt="" />
+              ITALIAN
+            </a>
+          </div> -->
+      </nav>
+    </div>
+
+    {% block content %} {% endblock content %}
+
+    <footer id="main-footer" class="py-3">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4 text-center">
+            <a href="#" class="text-muted p-2"
+              ><i class="fab fa-twitter fa-2x"></i
+            ></a>
+            <a href="#" class="text-muted p-2"
+              ><i class="fab fa-facebook-f fa-2x"></i
+            ></a>
+            <a href="#" class="text-muted p-2"
+              ><i class="fab fa-google-plus-g fa-2x"></i
+            ></a>
+            <a href="#" class="text-muted p-2"
+              ><i class="fab fa-linkedin-in fa-2x"></i
+            ></a>
+            <a href="#" class="text-muted p-2"
+              ><i class="fab fa-youtube fa-2x"></i
+            ></a>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="{% static 'img/trezzo-logo.png' %}" alt="" />
+          </div>
+          <div class="col-md-4 text-center">
+            <p>&copy; <span id="year"></span> TREZZO</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Add your site or application content here -->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+    <script src="{% static 'js/vendor/modernizr-3.8.0.min.js' %}"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
+        );
+    </script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function() {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Get the current year for the copyright
+      $("#year").text(new Date().getFullYear());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+{% extends '_base.html' %} {% block content %} {% load static %}
+
+<section id="contactpage">
+  <div id="contact-banner">
+    <img class="banner" src="{% static 'img/contact-banner.webp' %}" alt="" />
+    <div class="banner-overlay">
+      <h1 class="about-header px-5">Contact Us</h1>
+    </div>
+  </div>
+  <div class="container py-5">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page">
+          <a href="{% url 'baseapp:index' %}">Home</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section id="contact" class="py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card p-4">
+          <div class="card-body">
+            <h3 class="text-center">Address</h3>
+            <p>Tiger Caves, Chennai, Tamil Nadu, India</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3892.8613374187976!2d80.20711021475563!3d12.65709522512604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52536d31b95cdb%3A0xfd814a7973a6ac26!2sTiger%20Cave!5e0!3m2!1sen!2sin!4v1582043984487!5m2!1sen!2sin"
+              width="300"
+              height="450"
+              frameborder="0"
+              style="border:0;"
+              allowfullscreen=""
+              id="map-container"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="text-center">Contact Us</h3>
+            <hr />
+            <form
+              name="regForm"
+              action="."
+              method="POST"
+              class="needs-validation"
+            >
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="First Name"
+                    name="fname"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please Enter Password
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Last Name"
+                      name="lname"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Age"
+                      name="age"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Male or Female"
+                      name="gender"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Phone Number"
+                      name="pnumber"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1"
+                      >Select Service</label
+                    >
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Budding Danclings</option>
+                      <option>Professional Dancling</option>
+                      <option>Fun Burn-out</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <button
+                      type="submit"
+                      class="btn-outline-danger btn-lg"
+                      onClick="ValidateFunct()"
+                    >
+                      Register
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr />
+
+{% endblock content %}

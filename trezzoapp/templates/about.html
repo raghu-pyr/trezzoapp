@@ -1,0 +1,141 @@
+{% extends '_base.html' %} {% block content %} {% load static %}
+
+<section id="aboutpage">
+  <div id="about-banner">
+    <img class="banner" src="{% static 'img/about-banner.jpg' %}" alt="" />
+    <div class="banner-overlay">
+      <h1 class="about-header px-5">About</h1>
+    </div>
+  </div>
+  <div class="container py-5">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page">
+          <a href="{% url 'baseapp:index' %}">Home</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">About</li>
+      </ol>
+    </nav>
+    <div class="row py-3">
+      <div class="col-md-6 py-4" id="who-text">
+        <h2 class="text-dark">Who Are We?</h2>
+        <h3 class="lead">
+          TREZZO started its operations in 2017 as DEPL, an OPC manufacturing
+          engineering plastic products
+        </h3>
+        <h4 class="lead">
+          Today the core team fo Trezzo has 50 yeas of consolidated industrial
+          experience in the domains of Product Design & Development, structural
+          fabrication, Electrochemical fixture & Manufacturing, VAVE, Cost
+          Optimization, CAE, reverse engineering, Conceptualization to product
+          launch along with post market engineering support
+        </h4>
+        <h4 class="lead">
+          Since inception, our commitment to customers & agile operations has
+          been our unique selling proposition.
+        </h4>
+      </div>
+      <div class="col-md-6 py-4">
+        <img
+          class="img-fluid"
+          src="{% static 'img/brand_promise.JPG' %}"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="row py-4">
+      <div class="col">
+        <div id="accordion" class="py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="mb-0">
+                      <div
+                        href="#collapse1"
+                        data-toggle="collapse"
+                        data-parent="#accordion"
+                      >
+                        <i class="fas fa-arrow-circle-down"></i> Our Vision
+                      </div>
+                    </h5>
+                  </div>
+                  <div id="collapse1" class="collapse show">
+                    <div class="card-body">
+                      To be a trusted partner for Engineering & Technology
+                      requirements of Global customers
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="mb-0">
+                      <div
+                        href="#collapse2"
+                        data-toggle="collapse"
+                        data-parent="#accordion"
+                      >
+                        <i class="fas fa-arrow-circle-down"></i> Our Mission
+                      </div>
+                    </h5>
+                  </div>
+                  <div id="collapse2" class="collapse">
+                    <div class="card-body">
+                      <ul>
+                        <li>To deliver end to end innovative solutions.</li>
+                        <li>
+                          To design & manufacture world class engineering
+                          products & services.
+                        </li>
+                        <li>
+                          To follow a systematic & agile project management
+                          process.
+                        </li>
+                        <li>To consistently demonstrate brand promise..</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <h5 class="mb-0">
+                      <div
+                        href="#collapse3"
+                        data-toggle="collapse"
+                        data-parent="#accordion"
+                      >
+                        <i class="fas fa-arrow-circle-down"></i> Our Value
+                      </div>
+                    </h5>
+                  </div>
+                  <div id="collapse3" class="collapse">
+                    <div class="card-body">
+                      We Cater to the entire phase of product development right
+                      from requirement, engineering, Conceptualization to
+                      product launch along with post market engineering support
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row py-5 px-3" id="lifecycle-section">
+      <img class="img-fluid" src="{% static 'img/lifecycle.png' %}" alt="" />
+      <div class="col">
+        <h2>Trezzo All the Way</h2>
+        <h3>
+          Trezzo possess the capability to take your product from a simplpe idea
+          to product. Trezzo leading the way through out your product lifecycle.
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr />
+
+{% endblock content %}

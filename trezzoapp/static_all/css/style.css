@@ -110,17 +110,17 @@ h3 {
 }
 
 .carousel-image-1 {
-  background: url("../img/engineering.jpg");
+  background: url("../img/engineering-2.jpg");
   background-size: cover;
 }
 
 .carousel-image-2 {
-  background: url("../img/innovation.jpg");
+  background: url("../img/engineering-banner-2.jpg");
   background-size: cover;
 }
 
 .carousel-image-3 {
-  background: url("../img/technology.jpg");
+  background: url("../img/banner-3.jpg");
   background-size: cover;
 }
 
@@ -142,7 +142,7 @@ h3 {
 
 .banner-overlay {
   position: absolute;
-  top: 40%;
+  top: 37%;
   bottom: 0;
   left: 10%;
   right: 0;
@@ -242,14 +242,18 @@ h3 {
 
 #industries .text-overlay {
   position: absolute;
-  top: 80%;
+  top: 0%;
   bottom: 0;
-  left: 5%;
+  left: 0%;
   right: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
   color: white;
-  text-shadow: 3px 0 black;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-shadow: 2px 0 white;
 }
 
 .about-header {
@@ -270,13 +274,21 @@ h3 {
   text-align: justify;
 }
 
-#lifecycle-section {
-  background-color: rgba(166, 166, 166, 0.2);
+.lifecycle-section {
+  background-color: white !important;
 }
 
 footer img {
   height: 30px;
   width: auto;
+}
+
+
+iframe {
+  border: 0;
+  height: 150%;
+  width: 100%;
+  overflow: hidden;
 }
 
 /*******************************************************************/

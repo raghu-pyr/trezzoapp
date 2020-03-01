@@ -2,7 +2,7 @@
 
 <section id="contactpage">
   <div id="contact-banner">
-    <img class="banner" src="{% static 'img/contact-banner.webp' %}" alt="" />
+    <img class="banner" src="{% static 'img/contact-banner-4.png' %}" alt="" />
     <div class="banner-overlay">
       <h1 class="about-header px-5">Contact Us</h1>
     </div>
@@ -19,49 +19,81 @@
   </div>
 </section>
 
-<section id="contact" class="py-3">
+<section id="contact">
   <div class="container">
+    <div class="row pb-3">
+      <div class="col-md-12">
+        <h3 class="lead">
+          We will be very glad to hear from you. Reachout to us for any queries,
+          we are happy to hear from you. We believe in collabration, let this be
+          a beginning of am wonderful collabration
+        </h3>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-4">
-        <div class="card p-4">
-          <div class="card-body">
+        <div class="card h-100">
+          <div class="card-body text-center">
             <h3 class="text-center">Address</h3>
-            <p>Tiger Caves, Chennai, Tamil Nadu, India</p>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3892.8613374187976!2d80.20711021475563!3d12.65709522512604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52536d31b95cdb%3A0xfd814a7973a6ac26!2sTiger%20Cave!5e0!3m2!1sen!2sin!4v1582043984487!5m2!1sen!2sin"
-              width="300"
-              height="450"
-              frameborder="0"
-              style="border:0;"
-              allowfullscreen=""
-              id="map-container"
-            ></iframe>
+            <hr/>
+            <p>
+              #8, New Colony,<br />12th Main Road, Anna Nagar West,<br />Chennai
+              -600040<br />Tamil Nadu, India.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                width="100%"
+                height="150%"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=80.20616054534914%2C12.655182634675331%2C80.21118164062501%2C12.658752263171921&amp;layer=mapnik&amp;marker=12.656967455166527%2C80.20867109298706"
+                style="border: 1px solid black"
+              ></iframe
+              ><br /><small
+                ><a
+                  href="https://www.openstreetmap.org/?mlat=12.65697&amp;mlon=80.20867#map=18/12.65697/80.20867"
+                  >View Larger Map</a
+                ></small
+              >
+              <hr />
+              <img
+                class="img-fluid"
+                src="{% static 'img/trezzo-logo.png' %}"
+                alt=""
+              />
+              
+            </div>
           </div>
         </div>
       </div>
       <div class="col-md-8">
-        <div class="card">
+        <div class="card h-100">
           <div class="card-body">
             <h3 class="text-center">Contact Us</h3>
             <hr />
             <form
-              name="regForm"
-              action="."
+              name="contactForm"
+              action="{% url 'baseapp:contact' %}"
               method="POST"
               class="needs-validation"
+              novalidate
             >
               {% csrf_token %}
-              <div class="row">
+              <div class="form-row">
                 <div class="col-md-6">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="First Name"
-                    name="fname"
-                    required
-                  />
-                  <div class="invalid-feedback">
-                    Please Enter Password
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First Name"
+                      name="fname"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please Enter First Name
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -70,31 +102,12 @@
                       type="text"
                       class="form-control"
                       placeholder="Last Name"
-                      name="lname"
+                      name="lsname"
                       required
                     />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Age"
-                      name="age"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Enter Male or Female"
-                      name="gender"
-                      required
-                    />
+                    <div class="invalid-feedback">
+                      Please Enter Last Name
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -106,41 +119,65 @@
                       name="email"
                       required
                     />
+                    <div class="invalid-feedback">
+                      Please Enter Email Address
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <input
-                      type="text"
+                      type="tel"
                       class="form-control"
-                      placeholder="Phone Number"
+                      placeholder="Contact Number"
                       name="pnumber"
+                      pattern="[0-9]{5,}"
                       required
                     />
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="form-group">
-                    <label for="exampleFormControlSelect1"
-                      >Select Service</label
-                    >
-                    <select class="form-control" id="exampleFormControlSelect1">
-                      <option>Budding Danclings</option>
-                      <option>Professional Dancling</option>
-                      <option>Fun Burn-out</option>
-                    </select>
+                    <div class="invalid-feedback">
+                      Please Enter Contact Number
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Subject"
+                      name="subject"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please Enter Subject
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea
+                      name="messagetxt"
+                      class="form-control"
+                      id="exampleFormControlTextarea1"
+                      rows="7"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">
+                      Please Enter Message
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
                     <button
                       type="submit"
-                      class="btn-outline-danger btn-lg"
+                      class="btn-outline-danger btn"
                       onClick="ValidateFunct()"
                     >
-                      Register
+                      Send Message
                     </button>
                   </div>
                 </div>
@@ -154,5 +191,34 @@
 </section>
 
 <hr />
+
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function() {
+    "use strict";
+    window.addEventListener(
+      "load",
+      function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName("needs-validation");
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener(
+            "submit",
+            function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      },
+      false
+    );
+  })();
+</script>
 
 {% endblock content %}

@@ -94,7 +94,7 @@
                         <a class="nav-link" href="#">Design</a>
                       </li>
                       <li class="nav-item py-0">
-                        <a class="nav-link" href="#">Manifacturing</a>
+                        <a class="nav-link" href="{% url 'baseapp:manufacturing' %}">Manufacturing</a>
                       </li>
                       <li class="nav-item py-0">
                         <a class="nav-link" href="#">Testing</a>
@@ -172,7 +172,7 @@
                         <a class="nav-link" href="#">Design</a>
                       </li>
                       <li class="nav-item py-0">
-                        <a class="nav-link" href="#">Manufacturing</a>
+                        <a class="nav-link" href="{% url 'baseapp:manufacturing' %}">Manufacturing</a>
                       </li>
                       <li class="nav-item py-0">
                         <a class="nav-link" href="#">Testing</a>
@@ -269,7 +269,7 @@
         $(window).resize(function() {
           if ($(window).width() >= 980) {
             // when you hover a toggle show its dropdown menu
-            $(".navbar .dropdown-toggle").hover(function() {
+            $(".navbar .dropdown").hover(function() {
               $(this)
                 .parent()
                 .toggleClass("show");

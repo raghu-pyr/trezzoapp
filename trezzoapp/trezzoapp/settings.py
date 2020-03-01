@@ -35,6 +35,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_HOST = 'smtp.gmail.com' 
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'triadmailbox@gmail.com'
+EMAIL_HOST_PASSWORD = 'Triad@123'
+EMAIL_USE_TLS = True
+BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
 
 # Application definition
 

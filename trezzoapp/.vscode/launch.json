@@ -15,11 +15,7 @@
                 "--nothreading"
             ],
             "django": true,
-            "serverReadyAction": {
-                "pattern": "Starting development server at",
-                "uriFormat": "http://127.0.0.1:8000",
-                "action": "openExternally"
-            }
+            
         },
         {
             "name": "Launch localhost",

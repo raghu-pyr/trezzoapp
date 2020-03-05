@@ -14,6 +14,7 @@ html {
 
 :root {
   --main-color: #f40000;
+  --main-bg: #ff8533;
   --text-color: black;
   --sec-color: #a6a6a6;
   --muted-color: #7f7f7f;
@@ -29,6 +30,12 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
+}
+
+.btn {
+  background-color: var(--main-color) !important;
+  color: white !important;
+  border: none !important;
 }
 
 /*******************************************************************/
@@ -157,7 +164,7 @@ h3 {
 }
 
 #capability-text {
-  background-color: rgba(255, 102, 0, 0.8);
+  background-color: var(--main-bg);
   color: white;
 }
 
@@ -216,9 +223,13 @@ h3 {
   color: white;
 }
 
-#client .container:nth-child(2) {
-  background: white;
-  box-shadow: 2px 2px 5px var(--main-color);
+#client-pallette {
+  position: relative;
+  min-height: 300px;
+  background: url("../img/the-polygon-1562743.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 #client img {
@@ -257,11 +268,11 @@ h3 {
 }
 
 .about-header {
-  background-color: rgba(255, 102, 0, 0.8);
+  background-color: var(--main-bg);
 }
 
 .contact-header {
-  background-color: rgba(255, 102, 0, 0.8);
+  background-color: var(--main-bg);
 }
 
 #map-container {
@@ -269,10 +280,26 @@ h3 {
 }
 
 #who-text {
-  background-color: rgba(255, 102, 0, 0.8);
+  background-color: var(--main-bg);
   color: white;
   text-align: justify;
 }
+
+#vision-img {
+  transform: rotateZ(-15deg);
+}
+
+#mission-img {
+  transform: rotateZ(15deg);
+}
+
+#vision-txt, #mission-txt {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--muted-color);
+  border-radius: 5px;
+}
+
 
 .lifecycle-section {
   background-color: white !important;
@@ -283,12 +310,35 @@ footer img {
   width: auto;
 }
 
+strong {
+  font-weight: bold;
+}
 
 iframe {
   border: 0;
   height: 150%;
   width: 100%;
   overflow: hidden;
+}
+
+#twit-icon:hover {
+  color: #50abf1 !important;
+}
+
+#fb-icon:hover {
+  color: #3a559f !important;
+}
+
+#insta-icon:hover {
+  color: #c82b70 !important;
+}
+
+#link-icon:hover {
+  color: #017bbe !important;
+}
+
+#yout-icon:hover {
+  color: #e02f2f !important;
 }
 
 /*******************************************************************/

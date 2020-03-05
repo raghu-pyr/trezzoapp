@@ -1,12 +1,15 @@
 {% extends '_base.html' %} {% block content %} {% load static %}
 
 <section id="aboutpage">
-  <div id="about-banner">
-    <img class="banner" src="{% static 'img/about-banner-2.jpg' %}" alt="" />
+  <div id="about-banner" class="pb-5">
+    <img class="banner lazyload" data-src="{% static 'img/about-banner-2.jpg' %}" alt="" />
     <div class="banner-overlay">
       <h1 class="about-header px-5">About</h1>
     </div>
   </div>
+</section>
+
+<section id="whyus">
   <div class="container py-5">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
@@ -16,6 +19,9 @@
         <li class="breadcrumb-item active" aria-current="page">About</li>
       </ol>
     </nav>
+  </div>
+
+  <div class="container">
     <div class="row py-3">
       <div class="col-md-6 py-4" id="who-text">
         <h2 class="text-dark">Who Are We?</h2>
@@ -37,105 +43,72 @@
       </div>
       <div class="col-md-6 py-4">
         <img
-          class="img-fluid"
-          src="{% static 'img/brand_promise.JPG' %}"
+          class="img-fluid lazyload"
+          data-src="{% static 'img/brand_promise.JPG' %}"
           alt=""
         />
       </div>
     </div>
-    <div class="row py-4">
-      <div class="col">
-        <div id="accordion" class="py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col">
-                <div class="card">
-                  <div class="card-header">
-                    <h5 class="mb-0">
-                      <div
-                        href="#collapse1"
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                      >
-                        <i class="fas fa-arrow-circle-down"></i> Our Vision
-                      </div>
-                    </h5>
-                  </div>
-                  <div id="collapse1" class="collapse show">
-                    <div class="card-body">
-                      To be a trusted partner for Engineering & Technology
-                      requirements of Global customers
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header">
-                    <h5 class="mb-0">
-                      <div
-                        href="#collapse2"
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                      >
-                        <i class="fas fa-arrow-circle-down"></i> Our Mission
-                      </div>
-                    </h5>
-                  </div>
-                  <div id="collapse2" class="collapse">
-                    <div class="card-body">
-                      <ul>
-                        <li>To deliver end to end innovative solutions.</li>
-                        <li>
-                          To design & manufacture world class engineering
-                          products & services.
-                        </li>
-                        <li>
-                          To follow a systematic & agile project management
-                          process.
-                        </li>
-                        <li>To consistently demonstrate brand promise..</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-header">
-                    <h5 class="mb-0">
-                      <div
-                        href="#collapse3"
-                        data-toggle="collapse"
-                        data-parent="#accordion"
-                      >
-                        <i class="fas fa-arrow-circle-down"></i> Our Value
-                      </div>
-                    </h5>
-                  </div>
-                  <div id="collapse3" class="collapse">
-                    <div class="card-body">
-                      We Cater to the entire phase of product development right
-                      from requirement, engineering, Conceptualization to
-                      product launch along with post market engineering support
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  </div>
+</section>
+<hr>
+<section id="visionstatement">
+  <div class="container py-5 d-flex flex-column">
+    <div class="row align-items-center">
+      <div class="col-md-4" id="vision-img">
+        <img
+          class="img-fluid img-thumbnail lazyload"
+          data-src="{% static 'img/telescope-2.png' %}"
+          alt=""
+        />
+      </div>
+      <div class="col-md-8" id="vision-txt">
+        <h2>VISION</h2>
+        <h2 class="lead">
+          To be a trusted partner for Engineering & Technology requirements of
+          Global customers
+        </h2>
       </div>
     </div>
-    <div class="row py-5 px-3" id="lifecycle-section">
-      <img class="img-fluid" src="{% static 'img/g906.png' %}" alt="" />
-      <div class="col">
-        <h2>Trezzo All the Way</h2>
-        <h3>
-          Trezzo possess the capability to take your product from a simplpe idea
-          to product. Trezzo leading the way through out your product lifecycle.
-        </h3>
+    <div class="row align-items-center">
+      <div class="col-md-8" id="mission-txt">
+        <h2>MISSION</h2>
+        <h2 class="lead">
+          <ul>
+            <li>To deliver end to end innovative solutions.</li>
+            <li>
+              To design & manufacture world class engineering products &
+              services.
+            </li>
+            <li>To follow a systematic & agile project management process.</li>
+            <li>To consistently demonstrate brand promise.</li>
+          </ul>
+        </h2>
+      </div>
+      <div class="col-md-4" id="mission-img">
+        <img
+          class="img-fluid img-thumbnail lazyload"
+          data-src="{% static 'img/target-002.png' %}"
+          alt=""
+        />
       </div>
     </div>
   </div>
 </section>
-
-<hr />
-
+<hr>
+<section id="lifecycle">
+  <div class="container">
+    <div class="col">
+      <h2>Trezzo All the Way</h2>
+      <h3>
+        Trezzo possess the capability to take your product from a simplpe idea
+        to product. Trezzo leading the way through out your product lifecycle.
+      </h3>
+    </div>
+    <div class="row py-5 px-3" id="lifecycle-section">
+      <img class="img-fluid lazyload" data-src="{% static 'img/g906.png' %}" alt="" />
+    </div>
+  </div>
+</section>
+<hr>
 {% endblock content %}

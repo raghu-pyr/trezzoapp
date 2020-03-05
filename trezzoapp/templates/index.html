@@ -14,7 +14,7 @@
             <h1 class="boldtitle">ENGINEERING.</h1>
             <h2 class="boldsub">Engineer the furture with us</h2>
 
-            <a href="#" class="btn btn-primary btn-large">Contact Us</a>
+            <a href="{% url 'baseapp:contact' %}" class="btn btn-primary btn-large">Contact Us</a>
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@
             <h1 class="boldtitle">INNOVATION.</h1>
             <h2 class="boldsub">Drive the Innovation of Tomorrow</h2>
 
-            <a href="#" class="btn btn-primary btn-large">Contact Us</a>
+            <a href="{% url 'baseapp:contact' %}" class="btn btn-primary btn-large">Contact Us</a>
           </div>
         </div>
       </div>
@@ -35,7 +35,7 @@
           <div class="carousel-caption d-sm-block text-left">
             <h1 class="boldtitle">TECHNOLOGY.</h1>
             <h2 class="boldsub">State-of-the-Art technologies with us</h2>
-            <a href="#" class="btn btn-primary btn-large">Contact Us</a>
+            <a href="{% url 'baseapp:contact' %}" class="btn btn-primary btn-large">Contact Us</a>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
         </h3>
       </div>
       <div class="col-md-5 p-0" id="capability-img">
-        <img src="{% static 'img/capability-hook.png' %}" alt="" />
+        <img class="lazyload" data-src="{% static 'img/capability-hook.png' %}" alt="" />
         <div id="dark-overlay"></div>
       </div>
     </div>
@@ -87,8 +87,8 @@
       <div class="col-md-4 p-0">
         <a href="#">
           <img
-            class="img-fluid"
-            src="{% static 'img/design-car.png' %}"
+            class="img-fluid lazyload"
+            data-src="{% static 'img/design-car.png' %}"
             alt=""
           />
           <div class="text-overlay">
@@ -97,10 +97,10 @@
         </a>
       </div>
       <div class="col-md-4 p-0">
-        <a href="{% url 'baseapp:manufacturing' %}">
+        <a href="{% url 'baseapp:service' %}">
           <img
-            class="img-fluid"
-            src="{% static 'img/manufacturing-drill.png' %}"
+            class="img-fluid lazyload"
+            data-src="{% static 'img/manufacturing-drill.png' %}"
             alt=""
           />
           <div class="text-overlay">
@@ -111,8 +111,8 @@
       <div class="col-md-4 p-0">
         <a href="#">
           <img
-            class="img-fluid"
-            src="{% static 'img/testing-tab.png' %}"
+            class="img-fluid lazyload"
+            data-src="{% static 'img/testing-tab.png' %}"
             alt=""
           />
           <div class="text-overlay">
@@ -132,32 +132,34 @@
       </div>
     </div>
   </div>
-  <div class="container py-5">
-    <div class="row">
-      <div class="col-md-3 text-center p-4">
-        <img class="img-fluid" src="{% static 'img/cat-logo.png' %}" alt="" />
+  <div id="client-pallette">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-3 text-center p-4">
+          <img class="img-fluid lazyload" data-src="{% static 'img/cat-logo.png' %}" alt="" />
+        </div>
+        <div class="col-md-3 offset-md-6 text-center p-4">
+          <img class="img-fluid lazyload" data-src="{% static 'img/HCL-logo.png' %}" alt="" />
+        </div>
       </div>
-      <div class="col-md-3 offset-md-6 text-center p-4">
-        <img class="img-fluid" src="{% static 'img/HCL-logo.png' %}" alt="" />
-      </div>
-    </div>
 
-    <div class="row text-center">
-      <div class="col p-4">
-        <img
-          class="img-fluid"
-          src="{% static 'img/Danfoss-logo.png' %}"
-          alt=""
-        />
+      <div class="row text-center">
+        <div class="col p-4">
+          <img
+            class="img-fluid lazyload"
+            data-src="{% static 'img/Danfoss-logo.png' %}"
+            alt=""
+          />
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-md-3 text-center p-4">
-        <img class="img-fluid" src="{% static 'img/BEL-logo.jpg' %}" alt="" />
-      </div>
-      <div class="col-md-3 offset-md-6 text-center p-4">
-        <img class="img-fluid" src="{% static 'img/sg-logo.png' %}" alt="" />
+      <div class="row">
+        <div class="col-md-3 text-center p-4">
+          <img class="img-fluid lazyload" data-src="{% static 'img/BEL-logo.jpg' %}" alt="" />
+        </div>
+        <div class="col-md-3 offset-md-6 text-center p-4">
+          <img class="img-fluid lazyload" data-src="{% static 'img/sg-logo.png' %}" alt="" />
+        </div>
       </div>
     </div>
   </div>
@@ -173,8 +175,8 @@
     <div class="row p-0">
       <div class="col-md-4 p-0">
         <img
-          class="img-fluid"
-          src="{% static 'img/aerospace-industry.png' %}"
+          class="img-fluid lazyload"
+          data-src="{% static 'img/aerospace-industry.png' %}"
           alt=""
         />
         <div class="text-overlay">
@@ -183,8 +185,8 @@
       </div>
       <div class="col-md-4 p-0">
         <img
-          class="img-fluid"
-          src="{% static 'img/automotive-industry.png' %}"
+          class="img-fluid lazyload"
+          data-src="{% static 'img/automotive-industry.png' %}"
           alt=""
         />
         <div class="text-overlay text-white">
@@ -193,8 +195,8 @@
       </div>
       <div class="col-md-4 p-0">
         <img
-          class="img-fluid"
-          src="{% static 'img/consumer-electronic-industry.png' %}"
+          class="img-fluid lazyload"
+          data-src="{% static 'img/consumer-electronic-industry.png' %}"
           alt=""
         />
         <div class="text-overlay">
@@ -205,8 +207,8 @@
     <div class="row p-0">
       <div class="col-md-4 p-0">
         <img
-          class="img-fluid"
-          src="{% static 'img/Euipment-industry.png' %}"
+          class="img-fluid lazyload"
+          data-src="{% static 'img/Euipment-industry.png' %}"
           alt=""
         />
         <div class="text-overlay">
@@ -215,8 +217,8 @@
       </div>
       <div class="col-md-4 p-0">
         <img
-          class="img-fluid"
-          src="{% static 'img/industrial-industry.png' %}"
+          class="img-fluid lazyload"
+          data-src="{% static 'img/industrial-industry.png' %}"
           alt=""
         />
         <div class="text-overlay text-white">
@@ -225,8 +227,8 @@
       </div>
       <div class="col-md-4 p-0">
         <img
-          class="img-fluid"
-          src="{% static 'img/medical-industry.png' %}"
+          class="img-fluid lazyload"
+          data-src="{% static 'img/medical-industry.png' %}"
           alt=""
         />
         <div class="text-overlay text-dark">

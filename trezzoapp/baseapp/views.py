@@ -6,8 +6,8 @@ from django.core.mail import send_mail
 def index(request):
     return render(request, "index.html")
 
-def manufacturing(request):
-    return render(request, "manufacturing.html")
+def service(request):
+    return render(request, "service.html")
 
 
 def about(request):

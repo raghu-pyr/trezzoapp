@@ -3,7 +3,7 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Trezzo - Engineering, Innovation, Technology</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -32,6 +32,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css"
       rel="stylesheet"
     />
+    <script src="{% static 'js/lazysizes.min.js' %}" async=""></script>
     <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
@@ -41,8 +42,8 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
-      <a class="navbar-brand" href="#"
-        ><img src="{% static 'img/trezzo-logo.png' %}" alt=""
+      <a class="navbar-brand" href="{% url 'baseapp:index' %}"
+        ><img class="lazyload" data-src="{% static 'img/trezzo-logo.png' %}" alt="Trezzo Logo"
       /></a>
       <button
         class="navbar-toggler"
@@ -53,7 +54,7 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon bg-dark"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -80,9 +81,9 @@
                   <div class="col-md-3 ml-right">
                     <a href="">
                       <img
-                        src="{% static 'img/service-thumbnail.jpg' %}"
+                        data-src="{% static 'img/service-thumbnail.jpg' %}"
                         alt=""
-                        class="img-fluid d-none d-lg-block"
+                        class="img-fluid d-none d-lg-block lazyload"
                       />
                     </a>
                   </div>
@@ -94,7 +95,9 @@
                         <a class="nav-link" href="#">Design</a>
                       </li>
                       <li class="nav-item py-0">
-                        <a class="nav-link" href="{% url 'baseapp:manufacturing' %}">Manufacturing</a>
+                        <a class="nav-link" href="{% url 'baseapp:service' %}"
+                          >Manufacturing</a
+                        >
                       </li>
                       <li class="nav-item py-0">
                         <a class="nav-link" href="#">Testing</a>
@@ -104,9 +107,9 @@
                   <div class="col-md-3 ml-right">
                     <a href="">
                       <img
-                        src="{% static 'img/industry-thumbnail.jpg' %}"
+                        data-src="{% static 'img/industry-thumbnail.jpg' %}"
                         alt=""
-                        class="img-fluid d-none d-lg-block"
+                        class="img-fluid d-none d-lg-block lazyload"
                       />
                     </a>
                   </div>
@@ -158,9 +161,9 @@
                   <div class="col-md-3 ml-right">
                     <a href="">
                       <img
-                        src="{% static 'img/service-thumbnail.jpg' %}"
+                        data-src="{% static 'img/service-thumbnail.jpg' %}"
                         alt=""
-                        class="img-fluid d-none d-lg-block"
+                        class="img-fluid d-none d-lg-block lazyload"
                       />
                     </a>
                   </div>
@@ -172,7 +175,9 @@
                         <a class="nav-link" href="#">Design</a>
                       </li>
                       <li class="nav-item py-0">
-                        <a class="nav-link" href="{% url 'baseapp:manufacturing' %}">Manufacturing</a>
+                        <a class="nav-link" href="{% url 'baseapp:service' %}"
+                          >Manufacturing</a
+                        >
                       </li>
                       <li class="nav-item py-0">
                         <a class="nav-link" href="#">Testing</a>
@@ -182,9 +187,9 @@
                   <div class="col-md-3 ml-right">
                     <a href="">
                       <img
-                        src="{% static 'img/industry-thumbnail.jpg' %}"
+                        data-src="{% static 'img/industry-thumbnail.jpg' %}"
                         alt=""
-                        class="img-fluid d-none d-lg-block"
+                        class="img-fluid d-none d-lg-block lazyload"
                       />
                     </a>
                   </div>
@@ -232,24 +237,41 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-4 text-center">
-            <a href="#" class="text-muted p-2"
+            <a
+              href="https://twitter.com/OliverMsmiith?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+              class="text-muted p-2"
+              id="twit-icon"
               ><i class="fab fa-twitter fa-2x"></i
             ></a>
-            <a href="#" class="text-muted p-2"
+            <a
+              href="https://www.facebook.com/"
+              class="text-muted p-2"
+              id="fb-icon"
               ><i class="fab fa-facebook-f fa-2x"></i
             ></a>
-            <a href="#" class="text-muted p-2"
-              ><i class="fab fa-google-plus-g fa-2x"></i
+            <a
+              href="https://www.instagram.com/"
+              class="text-muted p-2"
+              id="insta-icon"
+              ><i class="fab fa-instagram fa-2x"></i
             ></a>
-            <a href="#" class="text-muted p-2"
+            <a
+              href="https://in.linkedin.com/"
+              class="text-muted p-2"
+              id="link-icon"
               ><i class="fab fa-linkedin-in fa-2x"></i
             ></a>
-            <a href="#" class="text-muted p-2"
+            <a
+              href="https://www.youtube.com/"
+              class="text-muted p-2"
+              id="yout-icon"
               ><i class="fab fa-youtube fa-2x"></i
             ></a>
           </div>
           <div class="col-md-4 text-center">
-            <a href="{% url 'baseapp:index' %}"><img src="{% static 'img/trezzo-logo.png' %}" alt="" /></a>
+            <a href="{% url 'baseapp:index' %}"
+              ><img class="lazyload" data-src="{% static 'img/trezzo-logo.png' %}" alt=""
+            /></a>
           </div>
           <div class="col-md-4 text-center">
             <p>&copy; <span id="year"></span> TREZZO</p>

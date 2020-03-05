@@ -1,8 +1,8 @@
 {% extends '_base.html' %} {% block content %} {% load static %}
 
 <section id="contactpage">
-  <div id="contact-banner">
-    <img class="banner" src="{% static 'img/contact-banner-4.png' %}" alt="" />
+  <div id="contact-banner" class="pb-5">
+    <img class="banner lazyload" data-src="{% static 'img/contact-banner-4.png' %}" alt="" />
     <div class="banner-overlay">
       <h1 class="about-header px-5">Contact Us</h1>
     </div>
@@ -36,9 +36,9 @@
           <div class="card-body text-center">
             <h3 class="text-center">Address</h3>
             <hr/>
+            <p><strong>TREZZO TECHNOLOGY</strong></p>
             <p>
-              #8, New Colony,<br />12th Main Road, Anna Nagar West,<br />Chennai
-              -600040<br />Tamil Nadu, India.
+              #27, Third street, Anna complex,<br />Defense enclave, IAF post,<br />Avadi, Chennai - 600055<br />Tamil Nadu, India.
             </p>
             <div class="iframe-container">
               <iframe
@@ -48,19 +48,19 @@
                 scrolling="no"
                 marginheight="0"
                 marginwidth="0"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=80.20616054534914%2C12.655182634675331%2C80.21118164062501%2C12.658752263171921&amp;layer=mapnik&amp;marker=12.656967455166527%2C80.20867109298706"
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7770.521302550013!2d80.06379487428944!3d13.145951862966536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAnna%20complex%2C%20Defense%20enclave%2C%20IAF%20post%2C%20Avadi%2C%20Chennai%20-%20600055!5e0!3m2!1sen!2sin!4v1583285514810!5m2!1sen!2sin"
                 style="border: 1px solid black"
               ></iframe
               ><br /><small
                 ><a
-                  href="https://www.openstreetmap.org/?mlat=12.65697&amp;mlon=80.20867#map=18/12.65697/80.20867"
+                  href="https://goo.gl/maps/tUR8kjX8ppLj9w9A7"
                   >View Larger Map</a
                 ></small
               >
               <hr />
               <img
-                class="img-fluid"
-                src="{% static 'img/trezzo-logo.png' %}"
+                class="img-fluid lazyload"
+                data-src="{% static 'img/trezzo-logo.png' %}"
                 alt=""
               />
               

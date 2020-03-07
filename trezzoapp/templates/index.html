@@ -2,19 +2,19 @@
 
 <section id="showcase" class="py-5">
   <div id="myCarousel" class="carousel slide py-3" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
     <div class="carousel-inner">
       <div class="carousel-item carousel-image-1 active">
         <div class="container">
           <div class="carousel-caption text-left">
-            <h1 class="boldtitle">ENGINEERING.</h1>
-            <h2 class="boldsub">Engineer the furture with us</h2>
-
-            <a href="{% url 'baseapp:contact' %}" class="btn btn-primary btn-large">Contact Us</a>
+            <h1 class="display-1">ENGINEERING.</h1>
+            <h3 class="boldsub pb-5">
+              Engineer the furture with us Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Nemo, sunt. Lorem ipsum dolor sit,
+              amet consectetur adipisicing elit. Quod, voluptatum.
+            </h3>
+            <a href="{% url 'baseapp:contact' %}" class="btn btn-lg"
+              >Contact Us</a
+            >
           </div>
         </div>
       </div>
@@ -25,7 +25,9 @@
             <h1 class="boldtitle">INNOVATION.</h1>
             <h2 class="boldsub">Drive the Innovation of Tomorrow</h2>
 
-            <a href="{% url 'baseapp:contact' %}" class="btn btn-primary btn-large">Contact Us</a>
+            <a href="{% url 'baseapp:contact' %}" class="btn btn-lg"
+              >Contact Us</a
+            >
           </div>
         </div>
       </div>
@@ -35,7 +37,9 @@
           <div class="carousel-caption d-sm-block text-left">
             <h1 class="boldtitle">TECHNOLOGY.</h1>
             <h2 class="boldsub">State-of-the-Art technologies with us</h2>
-            <a href="{% url 'baseapp:contact' %}" class="btn btn-primary btn-large">Contact Us</a>
+            <a href="{% url 'baseapp:contact' %}" class="btn btn-lg"
+              >Contact Us</a
+            >
           </div>
         </div>
       </div>
@@ -56,7 +60,7 @@
     <div class="row">
       <div class="col-md-7 p-3" id="capability-text">
         <h2 class="text-dark">Capabilities</h2>
-        <h3>
+        <h3 class="text-justify">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, amet?
           Quidem voluptate nobis eum dolorum vitae minima deleniti veritatis
           error? Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -67,7 +71,11 @@
         </h3>
       </div>
       <div class="col-md-5 p-0" id="capability-img">
-        <img class="lazyload" data-src="{% static 'img/capability-hook.png' %}" alt="" />
+        <img
+          class="lazyload"
+          data-src="{% static 'img/capability-hook.png' %}"
+          alt=""
+        />
         <div id="dark-overlay"></div>
       </div>
     </div>
@@ -78,7 +86,21 @@
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <h1 id="headertext">SERVICE AND SUPPORT</h1>
+        <h2 id="headertext">SERVICE AND SUPPORT</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="row p-5">
+          <p class="lead text-justify">
+            Trezzo is divided into three functional groups, each specializing in
+            different aspects of product life cycle. Design, Manufacturing and
+            Testing verticals help in driving a solution from Ideation to
+            High-Quality Deployemnt
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -125,42 +147,85 @@
 </section>
 
 <section id="client">
-  <div class="container">
+  <div class="container-fluid pt-5 pb-2">
     <div class="row">
       <div class="col text-center">
-        <h1 id="headertext">CLIENTS</h1>
+        <h2 id="headertext">CLIENTS</h2>
       </div>
     </div>
   </div>
-  <div id="client-pallette">
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-md-3 text-center p-4">
-          <img class="img-fluid lazyload" data-src="{% static 'img/cat-logo.png' %}" alt="" />
+  <div class="container pb-5">
+    <div id="clientcarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row" id="client-logo">
+            <div class="col">
+              <img
+                class="img-fluid"
+                src="{% static 'img/cedi-Logo.png' %}"
+                alt="First slide"
+              />
+            </div>
+            <div class="col">
+              <img
+                class="img-fluid"
+                src="{% static 'img/caterpillar-logo.png' %}"
+                alt="First slide"
+              />
+            </div>
+            <div class="col">
+              <img
+                class="img-fluid"
+                src="{% static 'img/Danfoss-logo.png' %}"
+                alt="First slide"
+              />
+            </div>
+          </div>
         </div>
-        <div class="col-md-3 offset-md-6 text-center p-4">
-          <img class="img-fluid lazyload" data-src="{% static 'img/HCL-logo.png' %}" alt="" />
+        <div class="carousel-item">
+          <div class="row" id="client-logo">
+            <div class="col">
+              <img
+                class="img-fluid"
+                src="{% static 'img/sg-logo.png' %}"
+                alt="First slide"
+              />
+            </div>
+            <div class="col">
+              <img
+                class="img-fluid"
+                src="{% static 'img/HCL-logo.PNG' %}"
+                alt="First slide"
+              />
+            </div>
+            <div class="col">
+              <img
+                class="img-fluid"
+                src="{% static 'img/bel-logo.PNG' %}"
+                alt="First slide"
+              />
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="row text-center">
-        <div class="col p-4">
-          <img
-            class="img-fluid lazyload"
-            data-src="{% static 'img/Danfoss-logo.png' %}"
-            alt=""
-          />
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-3 text-center p-4">
-          <img class="img-fluid lazyload" data-src="{% static 'img/BEL-logo.jpg' %}" alt="" />
-        </div>
-        <div class="col-md-3 offset-md-6 text-center p-4">
-          <img class="img-fluid lazyload" data-src="{% static 'img/sg-logo.png' %}" alt="" />
-        </div>
-      </div>
+      <a
+        class="carousel-control-prev"
+        href="#clientcarousel"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#clientcarousel"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
 </section>
@@ -169,9 +234,23 @@
   <div class="container-fluid px-0">
     <div class="row">
       <div class="col text-center">
-        <h1 id="headertext">INDUSTRY</h1>
+        <h2 id="headertext">INDUSTRIES</h2>
       </div>
     </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="row p-5">
+          <p class="lead text-justify">
+            Trezzo's multifaceted and versatile skills are well-suited for
+            numerous indsutries ranging from aerospace to medical engineering.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid px-0">
     <div class="row p-0">
       <div class="col-md-4 p-0">
         <img

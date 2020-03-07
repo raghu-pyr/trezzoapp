@@ -35,7 +35,7 @@ h3 {
 .btn {
   background-color: var(--main-color) !important;
   color: white !important;
-  border: none !important;
+  border-color: var(--main-color) !important;
 }
 
 /*******************************************************************/
@@ -112,7 +112,7 @@ h3 {
   width: 30px;
 }
 
-.carousel-item {
+#myCarousel .carousel-item {
   height: 500px;
 }
 
@@ -232,8 +232,9 @@ h3 {
   background-repeat: no-repeat;
 }
 
-#client img {
-  width: 250px;
+#client-logo img {
+  height: 100px !important;
+  width: 100%;
 }
 
 #industries {
@@ -264,7 +265,7 @@ h3 {
   justify-content: left;
   color: white;
   background-color: rgba(255, 255, 255, 0.3);
-  text-shadow: 2px 0 white;
+  
 }
 
 .about-header {
@@ -300,9 +301,12 @@ h3 {
   border-radius: 5px;
 }
 
-
 .lifecycle-section {
   background-color: white !important;
+}
+
+footer {
+  background-color: #707070;
 }
 
 footer img {
@@ -361,10 +365,10 @@ iframe {
   }
 
   .boldsub {
-    font-size: 1rem !important;
+    font-size: 0.75rem !important;
   }
 
-  .carousel-item {
+  #myCarousel .carousel-item {
     height: 300px;
   }
 
@@ -418,7 +422,7 @@ iframe {
     font-size: 2rem;
   }
 
-  .carousel-item {
+  #myCarousel .carousel-item {
     height: 300px;
   }
 
@@ -443,12 +447,12 @@ iframe {
     text-shadow: 3px 0 var(--main-color) !important;
   }
 
-  .carousel-item {
+  #myCarousel .carousel-item {
     height: 400px;
   }
 
   .boldsub {
-    font-size: 4rem !important;
+    font-size: 2rem !important;
   }
 
   .navbar-brand img {
@@ -472,12 +476,12 @@ iframe {
     text-shadow: 3px 0 var(--main-color) !important;
   }
 
-  .carousel-item {
+  #myCarousel .carousel-item {
     height: 500px;
   }
 
   .boldsub {
-    font-size: 4rem !important;
+    font-size: 2rem !important;
   }
 
   .navbar-brand img {
